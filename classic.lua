@@ -16,8 +16,8 @@ function Object:new()
 end
 
 
-function Object:extend()
-  local cls = {}
+function Object:extend(cls)
+  local cls = cls or {}
   for k, v in pairs(self) do
     if k:find("__") == 1 then
       cls[k] = v
